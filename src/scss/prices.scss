@@ -1,0 +1,150 @@
+@import './variables.scss';
+@import './orderButton.scss';
+
+.prices {
+  margin-bottom: 32px;
+
+  &__heading {
+    margin-bottom: 16px;
+  }
+
+  &__swiper {
+    height: 260px;
+    padding: 16px;
+  }
+
+  &__item {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-heading {
+      color: $text-color-lighter;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-content {
+      font-size: 14px;
+    }
+
+    &-button {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+
+  &__container {
+    padding: 0 24px;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+
+    &-header {
+      padding: 16px;
+    }
+
+    &-header tr {
+      text-align: left;
+    }
+
+    &-header th {
+      padding: 16px;
+      color: $text-color-lighter;
+      font-weight: 500;
+    }
+
+    &-body {
+      border-radius: 6px;
+    }
+
+    &-body tr {
+      position: relative;
+      border-radius: 6px;
+    }
+
+    &-body tr::after {
+      content: '';
+      width: calc(100% - 32px);
+      height: 1px;
+      background-color: #eaeaea;
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+    }
+
+    &-body tr:last-child:after {
+      display: none;
+    }
+
+    &-body td {
+      padding: 16px 0;
+      padding-left: 16px;
+      background-color: #fff;
+    }
+
+    &-body tr:first-child td:first-child {
+      border-radius: 6px 0 0 0;
+    }
+
+    &-body tr:first-child td:last-child {
+      border-radius: 0 6px 0 0;
+    }
+
+    &-body tr:last-child td:first-child {
+      border-radius: 0 0 0 6px;
+    }
+
+    &-body tr:last-child td:last-child {
+      border-radius: 0 0 6px 0;
+    }
+  }
+
+  &__oferta {
+    max-width: 421px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  &__comercial {
+    font-weight: 500;
+    border: none;
+    text-align: left;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  &__comercial img {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 768px) {
+  .prices {
+    &__swiper {
+      display: none;
+    }
+
+    &__container {
+      padding: 0 32px;
+    }
+
+    &__table {
+      display: table;
+    }
+  }
+}

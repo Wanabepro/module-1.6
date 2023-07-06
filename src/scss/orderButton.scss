@@ -1,0 +1,16 @@
+.order-button {
+  border: none;
+  background-color: $button-color;
+  border-radius: 16px;
+  width: 119px;
+  height: 32px;
+  padding-left: 12px;
+  padding-right: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

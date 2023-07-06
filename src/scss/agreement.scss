@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.agreement {
+  color: $text-color-lighter;
+
+  &__link {
+    color: $button-color;
+    text-decoration: none;
+  }
+}

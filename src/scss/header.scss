@@ -1,0 +1,79 @@
+@import './round-button.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  padding: 0 16px;
+
+  &__left-group {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    &::after {
+      content: '';
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      border-radius: 1px;
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__buttons-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__call-button,
+  &__chat-button,
+  &__profile-button {
+    display: none;
+  }
+
+  &__profile-button {
+    margin-right: calc(42px - 16px);
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      border-radius: 1px;
+      position: absolute;
+      right: -24px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header__left-group {
+    gap: 42px;
+
+    &::after {
+      left: 60px;
+    }
+  }
+
+  .header__call-button,
+  .header__chat-button,
+  .header__profile-button {
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+}

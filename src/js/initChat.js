@@ -3,6 +3,7 @@ export const initChat = function () {
   const buttonOpenMenu = document.querySelector('.menu__chat-button')
   const buttonClose = document.querySelector('.chat__close-button')
   const chat = document.querySelector('.chat')
+  const input = document.querySelector('.chat__form').querySelector('.chat__input')
 
   buttonOpenHeader.addEventListener('click', openCallHandler)
   buttonOpenMenu.addEventListener('click', openCallHandler)
@@ -13,5 +14,6 @@ export const initChat = function () {
 
   function openCallHandler() {
     chat.style.display = 'block'
+    input.focus()
   }
 }

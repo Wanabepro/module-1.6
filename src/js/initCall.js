@@ -3,6 +3,7 @@ export const initCall = function () {
   const buttonOpenMenu = document.querySelector('.menu__call-button')
   const buttonClose = document.querySelector('.call__close-button')
   const call = document.querySelector('.call')
+  const input = document.querySelector('.call__form').querySelector('.call__input')
 
   buttonOpenHeader.addEventListener('click', openCallHandler)
   buttonOpenMenu.addEventListener('click', openCallHandler)
@@ -13,5 +14,6 @@ export const initCall = function () {
 
   function openCallHandler() {
     call.style.display = 'block'
+    input.focus()
   }
 }
